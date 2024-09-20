@@ -1,5 +1,6 @@
 name: Aprendiendo triggers
 run-name: ¡Primer hola mundo con triggers!
+
 on:
   push:  #PUSH
     branches: ['main', 'aprendiendo-**']
