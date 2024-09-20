@@ -9,15 +9,37 @@ env:
   var3: Contextos
 
 jobs:
-  check-main:
+  ruta_github:
     if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     steps:
         # Checks-out your repository
         - uses: actions/checkout@v4
+
         - name: Verificar ruta
           run: echo "Desplegando en la rama $GITHUB_REF"
+
         - name: Imprimir variables
           run: echo "${{ env.var1 }} ${{ env.var2 }} ${{ env.var3 }}"
+
+        # Runs script
+        - name: Definir variable
+          run: echo "USERNAME=${{github.actor}}">>$GITHUB_ENV
+
+        # Runs script
         - name: Correr python
-          run: python hola_lenguaje.py
+          run: python hola-mundo.py
+
+    else:
+    runs-on: ubuntu-latest
+    steps:
+        # Checks-out your repository
+        - uses: actions/checkout@v4
+
+        # Runs script
+        - name: Definir variable
+          run: echo "USERNAME=${{github.actor}}">>$GITHUB_ENV
+
+        # Runs script
+        - name: Correr python
+          run: python hola-mundo.py
