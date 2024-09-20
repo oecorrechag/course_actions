@@ -2,14 +2,11 @@ name: Aprendiendo variables
 run-name: ¡Primer hola mundo con variables!
 
 on:
-  push:  #PUSH
-    branches: ['main', 'aprendiendo-**']
-    paths: ['**.py']
-  
-  pull_request:  # PR
-    types: [opened, synchronize, reopened, labeled]
-    branches: ['main', 'aprendiendo-**']
-    paths: ['**.py']
+  push: 
+    push:
+        branches: [ "main" ]
+    pull_request:
+        branches: [ "main" ]
     
   schedule:  # SCHEDULE
     - cron: '59 23 * * SUN'
