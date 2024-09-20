@@ -59,4 +59,3 @@ jobs:
 
       - name: Correr python
         run: python hola-mundo.py
-        
