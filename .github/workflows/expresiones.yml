@@ -1,4 +1,5 @@
-name: Expression
+name: Aprendiendo expression
+run-name: ¡Primer hola mundo con expression!
 on:
     workflow_dispatch:
         inputs:
@@ -9,7 +10,7 @@ on:
             nombre:
                 description: 'Tu nombre'
                 required: true
-                default: 'Juan'
+                default: 'Oscar'
                 type: string
 jobs:
     mayor:
@@ -18,9 +19,13 @@ jobs:
         steps:
             - name : Correr script
               run: echo ${{ inputs.nombre }} es mayor de edad
+            - name: Correr python
+              run: python hola_lenguaje.py     
     menor:
         if: ${{ inputs.edad < 18 }}
         runs-on: ubuntu-latest
         steps:
             - name : Correr script
               run: echo ${{ inputs.nombre }} es menor de edad
+            - name: Correr python
+              run: python hola-mundo.py
