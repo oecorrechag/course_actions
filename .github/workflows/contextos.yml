@@ -15,5 +15,5 @@ jobs:
     steps:
       - run: echo "Desplegando en la rama $GITHUB_REF"
       - run: echo "${{ env.var1 }} ${{ env.var2 }} ${{ env.var3 }}"
-      - run: echo "${{ check-main.jobs }}"
-      
+      - name: Correr python
+        run: python hola_lenguaje.py
