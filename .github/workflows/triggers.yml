@@ -1,5 +1,5 @@
 name: Triggers
-run-name: Praxis 3 Triggers!
+run-name: ¡Primer hola mundo con triggers!
 on:
   push:  #PUSH
     branches: ['main', 'aprendiendo-**']
