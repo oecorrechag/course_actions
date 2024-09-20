@@ -2,7 +2,7 @@ name: Saludo usando variables
 run-name: ¡Primer hola mundo con variables!
 
 on:
-    workflow_dispatch
+    push
 
 env:
     DIA_DE_SEMANA: Lunes
