@@ -22,13 +22,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Build package
-        run: python setup.py sdist bdist_wheel
+      - name: Correr python
+        run: python hola-mundo.py
+
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Deploy to dev
-        run: python -m pip install dist/*
+      - name: Correr python
+        run: python hola-mundo.py
