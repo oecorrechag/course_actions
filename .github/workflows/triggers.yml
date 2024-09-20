@@ -1,4 +1,4 @@
-name: Triggers
+name: Aprendiendo triggers
 run-name: ¡Primer hola mundo con triggers!
 on:
   push:  #PUSH
