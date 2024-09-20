@@ -13,7 +13,11 @@ jobs:
     if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Desplegando en la rama $GITHUB_REF"
-      - run: echo "${{ env.var1 }} ${{ env.var2 }} ${{ env.var3 }}"
-      - name: Correr python
-        run: python hola_lenguaje.py
+        # Checks-out your repository
+        - uses: actions/checkout@v4
+        - name: Verificar ruta
+          run: echo "Desplegando en la rama $GITHUB_REF"
+        - name: Imprimir variables
+          run: echo "${{ env.var1 }} ${{ env.var2 }} ${{ env.var3 }}"
+        - name: Correr python
+          run: python hola_lenguaje.py
