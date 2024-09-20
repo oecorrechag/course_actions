@@ -5,10 +5,8 @@ on:
   push: 
     push:
         branches: [ "main" ]
-    pull_request:
-        branches: [ "main" ]
     
-  schedule:  # SCHEDULE
+  schedule: 
     - cron: '59 23 * * SUN'
   
   workflow_dispatch:
