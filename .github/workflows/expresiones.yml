@@ -17,15 +17,27 @@ jobs:
         if: ${{ inputs.edad >= 18 }}
         runs-on: ubuntu-latest
         steps:
+            # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+            - uses: actions/checkout@v4
+            
+            # Runs script
             - name : Correr script
               run: echo ${{ inputs.nombre }} es mayor de edad
+            # Runs script
             - name: Correr python
               run: python hola_lenguaje.py     
+              
     menor:
         if: ${{ inputs.edad < 18 }}
         runs-on: ubuntu-latest
         steps:
+            # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+            - uses: actions/checkout@v4
+
+            # Runs script
             - name : Correr script
               run: echo ${{ inputs.nombre }} es menor de edad
+
+            # Runs script
             - name: Correr python
               run: python hola-mundo.py
