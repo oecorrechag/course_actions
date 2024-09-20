@@ -1,6 +1,9 @@
 name: Aprendiendo expression
 run-name: ¡Primer hola mundo con expression!
 on:
+    push:
+        branches: [ "main" ]
+
     workflow_dispatch:
         inputs:
             edad:
